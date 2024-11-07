@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positive Vibes</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        #message { font-size: 50px; margin-top: 20px; color: ##2d6acc; }
+        button { padding: 30px 40px; font-size: 20px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Get a Positive Message!</h1>
+    <button onclick="showMessage()">Click Me</button>
+    <p id="message"></p>
+    <script>
+        const messages = [
+            "Hold the door open for someone!",
+            "Compliment someone today!",
+            "You’re awesome!",
+            "Share a smile with someone!",
+            "Help someone in need!",
+            "Believe in yourself!"
+        ];
+
+        function showMessage() {
+            const message = messages[Math.floor(Math.random() * messages.length)];
+            document.getElementById("message").textContent = message;
+        }
+    </script>
+</body>
+</html>
